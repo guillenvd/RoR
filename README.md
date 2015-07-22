@@ -139,8 +139,10 @@ dejemplo3.get_total_chars
 >	Después de haber hecho lo anterior tecleamos lo siguiente `rails new votos`
 >	Ahora entramos a nuestro nuevo proyecto `Cd: votos`
 >	Una vez dentro de nuestro nuevo proyecto comprovaremos que se genero con exito, por lo cual proseguiremos a iniciar el servidor de ruby con le siguiente comando, `rails server` o `rails s`, si todo va bien en consola debe de aparecer lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/server.PNG)
->	Despues de esto, abrimos nuestro navegador y escrivimos la siguiente dirección: 
+>	Despues de esto, abrimos nuestro navegador y escribimos la siguiente dirección: 
+
 >	http://localhost:3000/
+
 >	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
 > # Generando vistas & Controladores
 >	Para  decir un HOLA MUNDO en rails, lo primero que haremos es generar una vista, la cula estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
@@ -149,6 +151,8 @@ dejemplo3.get_total_chars
 >	Si todo salio como debería, en consola nos debe de desplegar lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/generatePrincipal.PNG)
 >	Para comprobar que todo funciona correctamente iremos a la siguiente dirección.
+
 >	http://localhost:3000/principal/index
+
 >	Donde podremos ver lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
