@@ -1,6 +1,6 @@
-# Project Name
+# Ruby on Rails: La primera frontera.
 
-TODO: Write a project description
+> Este taller se enfoca en dar los inicios a los interesa
 
 ## Installation
 
