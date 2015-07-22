@@ -145,7 +145,7 @@ dejemplo3.get_total_chars
 
 >	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
 > # Generando vistas & Controladores
->	Para  decir un HOLA MUNDO en rails, lo primero que haremos es generar una vista, la cual estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
+>	Para  decir un `HOLA MUNDO` en rails, lo primero que haremos es generar una vista, la cual estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
 >	Para crear un nuevo controlador, necestiamos correr el generador de controladores y decirle que queremos un controlador llamado "principal" con una acción llamada "index", lo cual se hace escribiendo la siguiente línea en nuestra terminal (estando en la carpeta de nuestro proyecto):
 
 >	 `rails generate controller principal index`
@@ -157,17 +157,21 @@ dejemplo3.get_total_chars
 
 >	http://localhost:3000/principal/index
 
->	  Donde podremos ver lo siguiente:
+>   Donde podremos ver lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
 > Ahora, para poder establecer nuestra ruta, principal/index como pantalla principal, tenemos que ir al archivo donde se declaran las rutas de acceso, el cual se encuentra en la siguiente dirección, `proyecto/config/routes.rb` , procedemos a abrirlo para poder editarlo.
 > Al abrirlo podremos ver que unicamente tenemos una routa declarada: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routes.PNG)
 > Ahora procederemos a cambiar la línea 2, por lo siguiente:
 
-> `get 'principal' => 'principal#index', as: :principal`
+> ```ruby
+    get 'principal' => 'principal#index', as: :principal
+> ```
 
 > y por ultimo agregaremos una línea más.
 
-> `root 'principal#index'` 
+> ```ruby
+    root 'principal#index'
+> ```
 
 > nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
 
@@ -205,7 +209,9 @@ dejemplo3.get_total_chars
 
 > Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
-> `<%= link_to 'Ira a temas', temas_path %>`
+> ```ruby
+   <%= link_to 'Ira a temas', temas_path %>
+> ```
 
 > Como realizaremos votaciones sobre temas, tenemos que generar una tabla que registre cada voto.
 > Esta tabla contendra el campo `id` y `tema_id`, proseguimos a escribir lo siguiente en la terminal:
@@ -224,12 +230,18 @@ dejemplo3.get_total_chars
 
 > Procedemoa abrir los modelos de temas y de votos y los editamos de tal manera que nos queden de la siguiente forma:
 > Temas
-> `has_many :votos, dependent: :destroy`
+
+> ```ruby
+   has_many :votos, dependent: :destroy
+> ```
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temaHas.PNG)
 
 > Votos
-> `belongs_to :tema`
+
+> ```ruby
+   belongs_to :tema
+> ```
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votoBelongs.PNG)
 
