@@ -195,4 +195,12 @@ dejemplo3.get_total_chars
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/rakeRoutes.PNG)
 
+> Ahora prueba con lo siguiente:
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/urConsole.PNG)
+
 > Despues de haber realizado lo anterior si nos dirigimos en nuestro navegadro a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
+
+> Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
+
+  
+> <%= link_to 'Ira a temas', temas_path %>
