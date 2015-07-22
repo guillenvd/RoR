@@ -326,7 +326,9 @@ dejemplo3.get_total_chars
 > `@import "bootstrap";`
 
 > Ya tenemos todo listo para comenzar a utilizar `Bootstrap` en nuestro proyecto.
+> Si no sabes sobre las clases disponibles de bootstrap o componentes puedes acceder a la siguiente página donde se encuentra toda la documentación de este framework.
 
+> http://getbootstrap.com/
 > ### Agregando nuestra propia hoja de estilo
 > Para agregar nuestra propia hoja de estilo, la podemos agregar directo en `votos/app/assets/stylesheet/custom.css`
 > Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/app/config/initializers/<assets class="rb"></assets>`
@@ -343,3 +345,24 @@ dejemplo3.get_total_chars
 
 > Ahora ya depende de la imaginación de cada quien para editar las vistas y darle formato.
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapImp.PNG)
+
+> # Validaciones de campos.
+
+> Como se puede apreciar, si intentamos generar un nuevo tema con los campos vacios o con una sola letra, este se genera
+> sin ningun problema, para poder impedir que esto suceda debemos de agregar validaciones o restricciones en el modelo de
+> de temas `votos/app/models/tema.rb`, donde anexaremos lo siguiente.
+
+> ```ruby
+  validates :titulo, :descripcion, presence: true
+   validates :titulo, length: {
+      minimum: 2,
+      maximum: 10,
+      too_short: "Debe de tener al menos %{count} letras",
+      too_long: "Debe de tener como maximo %{count} letras"
+      }
+>  ```
+
+> Donde básicamente le decimos que valide que tanto titulo y descripción no esten vacios y a demas que titulo tenga como maximo 10 letras y como Mínimo 2.
+
+> En esta página pueden encontrar más información sobre validaciones y otros temas.
+> http://guides.rubyonrails.org/active_record_validations.html
