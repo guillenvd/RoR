@@ -233,14 +233,48 @@ dejemplo3.get_total_chars
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votoBelongs.PNG)
 
-> | Clase de Modelo / métodos de asociación | Métodos de Instancia de Modelo |
+> Estando en nuestro proyecto en la terminal introducimos `rails c` y probamos lo siguiente:
+
+| Clase de Modelo / métodos de asociación | Métodos de Instancia de Modelo |
 | ------------- | ------------- |
-| Topic.first  | mi_tema.title  |
-| Topic.last  | mi_tema.title = 'New title'  |
-| Topic.all | mi_tema.update_attributes(title: 'New title')  |
-| Topic.count  | mi_tema.update_attributes(title: 'New title') |
-| Topic.find_by_id(5)   | mi_tema.save! |
-| Topic.destroy_all  | mi_tema.destroy |
-| mi_tema.votes.count | mi_tema.votes.first.destroy |
-| mi_tema.votes.create |  |
-| mi_tema.votes.destroy_all |  |
+| Tema.first  | mi_tema.titulo  |
+| Tema.last  | mi_tema.titulo = 'New titulo'  |
+| Tema.all | mi_tema.update_attributes(titulo: 'New titulo')  |
+| Tema.count  | mi_tema.update_attributes(titulo: 'New titulo') |
+| Tema.find_by_id(5)   | mi_tema.save! |
+| Tema.destroy_all  | mi_tema.destroy |
+| mi_tema.votos.count | mi_tema.votos.first.destroy |
+| mi_tema.votos.create |  |
+| mi_tema.votos.destroy_all |  |
+
+> Ya que hemos jugando un poco es momento de que podamos votar atravez de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
+> Metodo
+
+> ```ruby
+  #metodo para votar
+  def upvote
+    @tema = Tema.find(params[:id])
+    @tema.votos.create
+    redirect_to(temas_path)
+  end
+> ```
+
+> Ahora abrimos nuestro archivo routes.rb y anexamos nuestro metodo `upvote` a nuestro CRUD TEMAS, editamos el controlador para que quede de la siguiente forma:
+
+> ```ruby
+  resources :temas do
+    member do
+      post 'upvote'
+    end
+  end
+> ```
+
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/upVote.PNG)
+
+> Ahora a nuestra vista `index` de temas le anexamos un boton de botar, el cual tendra una accion sobre el metodo upvote
+ 
+ > ```ruby
+    <td><%= pluralize(tema.votos.count, "voto") %></td>
+    <td><%= button_to '+1', upvote_tema_path(tema), method: :post %></td>
+> ```   
