@@ -12,8 +12,23 @@
 > Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
 > http://rubyinstaller.org/
 
-Para Linux.
->
+* Para GNU/Linux.
+> Linux se debe de instalar RVM 
+
+''' Ruby
+ get 'principal' => 'principal#index', as: :principal
+  get 'temas' => 'temas#index', as: :temas
+  
+  resources :temas do
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
+  end
+'''
+  # match '/signup',  to: 'users#new'
+  root 'principal#index'
+
 
 ## Usage
 
