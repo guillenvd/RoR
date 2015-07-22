@@ -141,7 +141,7 @@ dejemplo3.get_total_chars
 >	Una vez dentro de nuestro nuevo proyecto comprovaremos que se genero con exito, por lo cual proseguiremos a iniciar el servidor de ruby con le siguiente comando, `rails server` o `rails s`, si todo va bien en consola debe de aparecer lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/server.PNG)
 >	Despues de esto, abrimos nuestro navegador y escribimos la siguiente dirección: 
 
->	http://localhost:3000/
+> http://localhost:3000/
 
 >	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
 > # Generando vistas & Controladores
@@ -152,7 +152,7 @@ dejemplo3.get_total_chars
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/generatePrincipal.PNG)
 >	Para comprobar que todo funciona correctamente iremos a la siguiente dirección.
 
->	http://localhost:3000/principal/index
+> http://localhost:3000/principal/index
 
 >	Donde podremos ver lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
