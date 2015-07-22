@@ -331,7 +331,7 @@ dejemplo3.get_total_chars
 > http://getbootstrap.com/
 > ### Agregando nuestra propia hoja de estilo
 > Para agregar nuestra propia hoja de estilo, la podemos agregar directo en `votos/app/assets/stylesheet/custom.css`
-> Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/app/config/initializers/<assets class="rb"></assets>`
+> Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/app/config/initializers/assets.rb class="rb"></assets>`
 
 > Nos debe de quedar algo así:
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/customAssetse.PNG)
