@@ -247,11 +247,11 @@ dejemplo3.get_total_chars
 | mi_tema.votos.create |  |
 | mi_tema.votos.destroy_all |  |
 
-> Ya que hemos jugando un poco es momento de que podamos votar atravez de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
-> Metodo
+> Ya que hemos jugado un poco es momento de que podamos votar atravez de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
+
 
 > ```ruby
-  #metodo para votar
+  #Nuevo metodo para votar temas_controller.rb
   def upvote
     @tema = Tema.find(params[:id])
     @tema.votos.create
