@@ -145,11 +145,14 @@ dejemplo3.get_total_chars
 
 >	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
 > # Generando vistas & Controladores
->	Para  decir un HOLA MUNDO en rails, lo primero que haremos es generar una vista, la cula estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
->	Para crear un nuevo controlador, necestiamos correr el generador de controladores y decirle que quieres un controlador llamado "welcome" con una acción llamada "index", lo cual se hace escribiendo la siguiente línea en nuestra terminal (estando en la carpeta de nuestro proyecto):
+>	Para  decir un HOLA MUNDO en rails, lo primero que haremos es generar una vista, la cual estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
+>	Para crear un nuevo controlador, necestiamos correr el generador de controladores y decirle que queremos un controlador llamado "principal" con una acción llamada "index", lo cual se hace escribiendo la siguiente línea en nuestra terminal (estando en la carpeta de nuestro proyecto):
+
 >	 `rails generate controller principal index`
+
 >	Si todo salio como debería, en consola nos debe de desplegar lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/generatePrincipal.PNG)
+
 >	Para comprobar que todo funciona correctamente iremos a la siguiente dirección:
 
 >	http://localhost:3000/principal/index
@@ -202,5 +205,28 @@ dejemplo3.get_total_chars
 
 > Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
-  
 > <%= link_to 'Ira a temas', temas_path %>
+
+> Como realizaremos votaciones sobre temas, por lo cual vamos a generar una tabla que registre cada voto.
+> Esta tabla contendra el campo `id` y `temas_id`, proseguimos a escribir lo siguiente en la terminal:
+
+> `rails generate model voto tema_id:integer`
+
+> `rake db:migrate`
+> `Ahora no realizaremos scaffold, ya que no se necesita`
+
+> Si todo salio bien en nuestra terminal dede de salir algo parecido a esto:
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votosRake.PNG)
+
+> Como ya se mencionó, podemos votar sobre los temas, entonces podemos deducir que tenemos que marcar las relaciones entre estas tablas, lo cual se hace directo en el modelo de cada una, los modelos se encuentran en la siguiente ruta.
+
+> `votos/app/models/
+
+> Procedemoa abrir los modelos de temas y de votos y los editamos de tal manera que nos queden de la siguiente forma:
+> Temas
+> `has_many :votos, dependent: :destroy`
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasHas.PNG)
+
+> Votos
+> `belongs_to :tema`
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votosBelongs.PNG)
