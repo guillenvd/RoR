@@ -51,7 +51,7 @@
 >	* 	array.min
 >	* 	array.max
 >
->	## Clases, Objetos y Variables
+>	###  *Clases, Objetos y Variables*
 >	Para esta parte crearemos un archivo en nuestro escritorio, con el nombre `yield` y la extension `.rb`
 >	en el cual colocaremos le siguiente codigo:
 >	```ruby
@@ -62,6 +62,48 @@ def test
 end
 test { puts "ejecutando el código dentro del bloque que hemos pasado como argumento" }
 ```
->  Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
->	ruby yield.rb
-> Podremos observar que se muestra lo siguiente ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/yield.PNG)
+> 	Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
+>	`ruby yield.rb`
+
+>	En la teminal podremos observar que se muestra lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/yield.PNG)
+>	###  *Tipos de Variables*
+> 	En ruby existen 5 tipos de variables, las cuales son:
+>	* Variables locales:
+
+>	```ruby
+		my_var = "Hola Mundo"
+>	```
+
+>	* Variables globales:
+
+>	```ruby
+		$my_global_bar = "Estoy accesible en cualquier lugar :("
+>	```
+
+>	* Variables constantes:
+
+>	```ruby
+		# alternativa 1
+		PI = 3.141592653589793
+		# alternativa 2
+		Pi = 3.141592653589793
+>	```
+
+>	* Variables de Clase:
+
+>	```ruby
+	class Persona
+	  @@class_variable = 10
+	end
+>	```
+
+>	* Variables de Instancia:
+
+>	```ruby
+class Example
+ def some_method
+    @instance_var = "Hola soy una variable de instancia y vivo dentro de un objeto"
+  end
+end
+>	```
+
