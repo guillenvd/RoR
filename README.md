@@ -130,6 +130,14 @@ dejemplo3 = Ejemplo.new("I <3 Ruby")
 dejemplo3.get_total_chars
 ```
 > 	Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
->	`ruby yield.rb`
+>	`ruby words.rb`
 
 >	En la teminal podremos observar que se muestra lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/words.PNG)
+
+# Generando el primer proyecto en Rails.
+>	Abrimos una nueva ventana la terminal y tecleamos lo siguiente: `Cd: /Sites`
+>	Después de haber hecho lo anterior tecleamos lo siguiente `rails new votos`
+>	Ahora entramos a nuestro nuevo proyecto `Cd: votos`
+>	Una vez dentro de nuestro nuevo proyecto comprovaremos que se genero con exito, por lo cual proseguiremos a iniciar el servidor de ruby con le siguiente comando, `rails server` o `rails s`, si todo va bien en consola debe de aparecer lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/server.PNG)
+>	Despues de esto, abrimos nuestro navegador y escrivimos la siguiente dirección: http://localhost:3000/
+>	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
