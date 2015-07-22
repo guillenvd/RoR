@@ -341,4 +341,4 @@ dejemplo3.get_total_chars
 >```
 
 > Ahora ya depende de la imaginación de cada quien para editar las vistas y darle formato.
-> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapImpl.PNG)
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapImp.PNG)
