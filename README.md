@@ -314,12 +314,12 @@ dejemplo3.get_total_chars
 
 > `bundle install`
 
-> Una vez instalado las dependecias modificaremos el sigueinte archivo `votos/assets/javascript/application.js` y agregaremos la sigueinte línea
-> `//= require bootstrap`  de tal manera que nuestro archivo quede de la siguietne forma:
+> Una vez instalado las dependecias modificaremos el sigueinte archivo `votos/app/assets/javascript/application.js` y agregaremos la sigueinte línea
+> `//= require bootstrap`  de tal manera que nuestro archivo quede de la siguiente forma:
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapJs.PNG)
 
-> Como ahora utilizamos archos  Sass, tenemos que renombrar el siguiente fichero: `votos/stylesheet/application.css` por `votos/stylesheet/application.scss`
+> Como ahora utilizamos archios  Sass de Bootstrap, tenemos que renombrar el siguiente fichero: `votos/app/stylesheet/application.css` por `votos/stylesheet/application.scss`
 > Y le anexamos una línea, la cual dice que utilizaremos bootstrap.
 
 > `@import "bootstrap";`
@@ -340,4 +340,5 @@ dejemplo3.get_total_chars
     <%= stylesheet_link_tag    'custom', media: 'all', 'data-turbolinks-track' => true %>
 >```
 
->
+> Ahora ya depende de la imaginación de cada quien para editar las vistas y darle formato.
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapImpl.PNG)
