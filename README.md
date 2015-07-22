@@ -299,8 +299,8 @@ dejemplo3.get_total_chars
 > Donde si damos click en el boton `+1` de algun tema, debe de incrementar los votos sobre dicho tema.
 
 > # Integrando Bootstrap
-> En este caso para integrar bootstrap a nuestro proyecto lo haremos en forma de dependcia, para lo cual iremos a nuestro archivo
-> `Gemfile` de nuestro proyecto (este se encuentra en la raíz), y anexaremos la siguiente linea:
+> En este caso para integrar bootstrap a nuestro proyecto lo haremos en forma de depencencia, para lo cual iremos a nuestro archivo
+> `Gemfile` de nuestro proyecto (este se encuentra en la raíz), y anexaremos la siguiente línea:
 
 > ``` ruby
   gem 'bootstrap-sass'
@@ -314,12 +314,13 @@ dejemplo3.get_total_chars
 
 > `bundle install`
 
-> Una vez instalado las dependecias modificaremos el sigueinte archivo `votos/app/assets/javascript/application.js` y agregaremos la sigueinte línea
+> Una vez instalado las dependecias modificaremos el siguiente archivo `votos/app/assets/javascript/application.js` y agregaremos la siguiente línea
+
 > `//= require bootstrap`  de tal manera que nuestro archivo quede de la siguiente forma:
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapJs.PNG)
 
-> Como ahora utilizamos archios  Sass de Bootstrap, tenemos que renombrar el siguiente fichero: `votos/app/stylesheet/application.css` por `votos/stylesheet/application.scss`
+> Como ahora utilizamos archivos  Sass de Bootstrap, tenemos que renombrar el siguiente fichero: `votos/app/stylesheet/application.css` por `votos/stylesheet/application.scss`
 > Y le anexamos una línea, la cual dice que utilizaremos bootstrap.
 
 > `@import "bootstrap";`
@@ -327,13 +328,13 @@ dejemplo3.get_total_chars
 > Ya tenemos todo listo para comenzar a utilizar `Bootstrap` en nuestro proyecto.
 
 > ### Agregando nuestra propia hoja de estilo
-> Para agregar nuestra propia hoja de estilo, la podemos agregar directo en `votos/app/assets/custom.css`
-> Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/config/initializers/<assets class="rb"></assets>`
+> Para agregar nuestra propia hoja de estilo, la podemos agregar directo en `votos/app/assets/stylesheet/custom.css`
+> Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/app/config/initializers/<assets class="rb"></assets>`
 
 > Nos debe de quedar algo así:
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/customAssetse.PNG)
 
-> Ahora procegimos a agregar la siguiente línea a la vista de la aplicación, nuestro archivo base, el cual se encuentra
+> Ahora proseguimos a agregar la siguiente línea a la vista de la aplicación, nuestro archivo base, el cual se encuentra
 > en la siguiente ruta `votos/app/views/layouts/application.html.erb`
 
 > ```ruby 
