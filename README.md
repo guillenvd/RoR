@@ -20,4 +20,4 @@
 > Excribe esto en la terminal para inicializar el intérprete Interactivo de Ruby.
 > `irb`
 > Así se debería de ver nuestra terminal 
-![Image of irb](https://github.com/guillenvd/RoR/img/cmd-irb.PNG)
+![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/cmd-irb.PNG)
