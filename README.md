@@ -11,7 +11,7 @@
 
 > Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
 > http://rubyinstaller.org/
-> Se debe de instala la versión 2.0
+> Se debe de instalar la versión 2.0
 
 * Para GNU/Linux.
 > Linux se debe de instalar RVM 
@@ -52,7 +52,7 @@
 >	* 	array.max
 >
 >	###  *Clases, Objetos y Variables*
->	Para esta parte crearemos un archivo en nuestro escritorio, con el nombre `yield` y la extension `.rb`
+>	Para esta parte crearemos un archivo en nuestro escritorio, con el nombre `yield` y la extensión `.rb`
 >	en el cual colocaremos le siguiente codigo:
 >	```ruby
 def test
@@ -77,7 +77,7 @@ test { puts "ejecutando el código dentro del bloque que hemos pasado como argum
 >	* Variables globales:
 
 >	```ruby
-		$my_global_bar = "Estoy accesible en cualquier lugar :("
+		$my_global_bar = "Estoy accesible en cualquier lugar :'("
 >	```
 
 >	* Variables constantes:
@@ -107,7 +107,7 @@ class Example
 end
 >	```
 
-> Ahora crearemos otro archivo en nuestro escritorio, con el nombre `words` y la extension `.rb`
+> Ahora crearemos otro archivo en nuestro escritorio, con el nombre `words` y la extensión `.rb`
 >	en el cual colocaremos le siguiente codigo:
 >	```ruby
 class Ejemplo
