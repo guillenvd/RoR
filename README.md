@@ -169,12 +169,13 @@ dejemplo3.get_total_chars
 > nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
 
 > Ahora al abrir nuestra aplicación, desde la routa `http://localhost:3000/` nos debe de desplegar la vista principal, como se ve a continuación: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalPrincipal.PNG)
+
 > Ahora iremos a trabajar con el controlador y a vista un poco, los cuales se encuentran en la siguiente dirección:
 > Las vistas estan en: `proyecto/app/views/principal`
 > Los controladores estan en: `proyecto/app/views/controllers`
 
 > ### *Generando un CRUD*
-> Ya que sabemos como crear una vista, controlador y accion, vamos a generar un crud, con el cual podamos crear, leer, actualizar y eliminar objetos de una BD.
+> Ya que sabemos como crear una vista, controlador y una accion, ahora vamos a generar un crud, con el cual podamos crear, leer, actualizar y eliminar objetos de una BD.
 
 > #### *Creando Una Migracion*
 > Nuestra primera tabla tendra los campos `id`, `titulo` & `descripcion`, esto lo realizaremos automaticamente con el comando `Scaffold` el cual nos generará nuestro esquema de la tabla, el modelo, vista y controlador del mismo, en este caso de tema, en la ventana de terminal escribiremos lo siguiente (dentro del directorio de nuestro proyecto):
@@ -184,5 +185,14 @@ dejemplo3.get_total_chars
 > Seguido de:
 
 > `rake db:migrate`
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/rakeTemas.PNG)
+
+> Ahora si corremos el siguiente comando: 
+
+> `rake routes` 
+> Con el cual veremos lo siguiente:
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/rakeRoutes.PNG)
 
 > Despues de haber realizado lo anterior si nos dirigimos en nuestro navegadro a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
