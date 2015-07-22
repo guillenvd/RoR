@@ -158,9 +158,14 @@ dejemplo3.get_total_chars
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
 > Ahora, para poder establecer nuestra ruta, principal/index como pantalla principal, tenemos que ir al archivo donde se declaran las rutas de acceso, el cual se encuentra en la siguiente dirección, `proyecto/config/routes.rb` , procedemos a abrirlo para poder editarlo.
 > Al abrirlo podremos ver que unicamente tenemos una routa declarada: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routes.PNG)
-> Ahora procederemos a cambiar la linea 2, por lo siguiente: 
+> Ahora procederemos a cambiar la linea 2, por lo siguiente:
+
 > `get 'principal' => 'principal#index', as: :principal`
+
 > y por ultimo agregaremos una linea más.
-> root 'principal#index' 
+
+> `root 'principal#index'` 
+
 > nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
+
 > Ahora al abrir nuestra aplicación, desde la primera
