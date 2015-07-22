@@ -15,9 +15,8 @@
 * Para GNU/Linux.
 > Linux se debe de instalar RVM 
 
-# Inicando con Ruby.
+# Iniciando con Ruby.
 
-> Excribe esto en la terminal para inicializar el intérprete Interactivo de Ruby.
-> `irb`
+> Escribe `irb` esto en la terminal para inicializar el intérprete Interactivo de Ruby.
 > Así se debería de ver nuestra terminal 
 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/cmd-irb.PNG)
