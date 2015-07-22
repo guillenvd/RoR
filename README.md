@@ -107,3 +107,29 @@ class Example
 end
 >	```
 
+> Ahora crearemos otro archivo en nuestro escritorio, con el nombre `words` y la extension `.rb`
+>	en el cual colocaremos le siguiente codigo:
+>	```ruby
+class Ejemplo
+  @@total_chars = 0
+  def initialize(word)
+    @word_chars  = word.length
+    puts "La palabra #{word}, tiene #{@word_chars} caracteres"
+    @@total_chars += @word_chars
+    get_total_chars
+  end 
+  def get_total_chars
+    puts "el total de caracteres son #{@@total_chars}"
+  end
+end
+dejemplo1 = Ejemplo.new('Hello Word')
+dejemplo1.get_total_chars
+dejemplo2 = Ejemplo.new("I Love Ruby")
+dejemplo2.get_total_chars
+dejemplo3 = Ejemplo.new("I <3 Ruby")
+dejemplo3.get_total_chars
+```
+> 	Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
+>	`ruby yield.rb`
+
+>	En la teminal podremos observar que se muestra lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/words.PNG)
