@@ -15,16 +15,9 @@
 * Para GNU/Linux.
 > Linux se debe de instalar RVM 
 
-```ruby
- get 'principal' => 'principal#index', as: :principal
-  get 'temas' => 'temas#index', as: :temas
-  
-  resources :temas do
-    member do
-      post 'upvote'
-      post 'downvote'
-    end
-  end
-```
-  # match '/signup',  to: 'users#new'
-  root 'principal#index'
+# Inicando con Ruby.
+
+> Excribe esto en la terminal para inicializar el intérprete Interactivo de Ruby.
+> `irb`
+> Así se debería de ver nuestra terminal 
+![Image of irb](https://drive.google.com/open?id=0B35ePHTpndhjNjlIWkFKc2JXdEE)
