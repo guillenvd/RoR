@@ -15,7 +15,7 @@
 * Para GNU/Linux.
 > Linux se debe de instalar RVM 
 
-''' Ruby
+```ruby
  get 'principal' => 'principal#index', as: :principal
   get 'temas' => 'temas#index', as: :temas
   
@@ -25,7 +25,7 @@
       post 'downvote'
     end
   end
-'''
+```
   # match '/signup',  to: 'users#new'
   root 'principal#index'
 
