@@ -146,7 +146,7 @@ dejemplo3.get_total_chars
 >	En nuestro navegador se debe de desplegar lo siguiente:  ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/railsRun.PNG)
 > # Generando vistas & Controladores
 >	Para  decir un HOLA MUNDO en rails, lo primero que haremos es generar una vista, la cula estableceremos como la vista principal de nuestro proyecto, lo cual lo realizaremos con los comandos de consola que Rails trae predefinidos.
->	Para crear un nuevo controlador, necestiamos correr el generador de controladores y decirle que quieres un controlador llamado "welcome" con una acción llamada "index", lo cual se hace escribiendo la siguiente linea en nuestra terminal (estando en la carpeta de nuestro proyecto):
+>	Para crear un nuevo controlador, necestiamos correr el generador de controladores y decirle que quieres un controlador llamado "welcome" con una acción llamada "index", lo cual se hace escribiendo la siguiente línea en nuestra terminal (estando en la carpeta de nuestro proyecto):
 >	 `rails generate controller principal index`
 >	Si todo salio como debería, en consola nos debe de desplegar lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/generatePrincipal.PNG)
@@ -158,14 +158,31 @@ dejemplo3.get_total_chars
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
 > Ahora, para poder establecer nuestra ruta, principal/index como pantalla principal, tenemos que ir al archivo donde se declaran las rutas de acceso, el cual se encuentra en la siguiente dirección, `proyecto/config/routes.rb` , procedemos a abrirlo para poder editarlo.
 > Al abrirlo podremos ver que unicamente tenemos una routa declarada: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routes.PNG)
-> Ahora procederemos a cambiar la linea 2, por lo siguiente:
+> Ahora procederemos a cambiar la línea 2, por lo siguiente:
 
 > `get 'principal' => 'principal#index', as: :principal`
 
-> y por ultimo agregaremos una linea más.
+> y por ultimo agregaremos una línea más.
 
 > `root 'principal#index'` 
 
 > nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
 
-> Ahora al abrir nuestra aplicación, desde la primera
+> Ahora al abrir nuestra aplicación, desde la routa `http://localhost:3000/` nos debe de desplegar la vista principal, como se ve a continuación: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalPrincipal.PNG)
+> Ahora iremos a trabajar con el controlador y a vista un poco, los cuales se encuentran en la siguiente dirección:
+> Las vistas estan en: `proyecto/app/views/principal`
+> Los controladores estan en: `proyecto/app/views/controllers`
+
+> ### *Generando un CRUD*
+> Ya que sabemos como crear una vista, controlador y accion, vamos a generar un crud, con el cual podamos crear, leer, actualizar y eliminar objetos de una BD.
+
+> #### *Creando Una Migracion*
+> Nuestra primera tabla tendra los campos `id`, `titulo` & `descripcion`, esto lo realizaremos automaticamente con el comando `Scaffold` el cual nos generará nuestro esquema de la tabla, el modelo, vista y controlador del mismo, en este caso de tema, en la ventana de terminal escribiremos lo siguiente (dentro del directorio de nuestro proyecto):
+
+> `rails generate scaffold tema titulo:string descripcion:text`
+
+> Seguido de:
+
+> `rake db:migrate`
+
+> Despues de haber realizado lo anterior si nos dirigimos en nuestro navegadro a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
