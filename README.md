@@ -62,7 +62,7 @@ def test
 end
 test { puts "ejecutando el código dentro del bloque que hemos pasado como argumento" }
 ```
-> 	Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
+> 	Después nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
 >	`ruby yield.rb`
 
 >	En la teminal podremos observar que se muestra lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/yield.PNG)
@@ -129,17 +129,17 @@ dejemplo2.get_total_chars
 dejemplo3 = Ejemplo.new("I <3 Ruby")
 dejemplo3.get_total_chars
 ```
-> 	Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
+> 	Después nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
 >	`ruby words.rb`
 
 >	En la teminal podremos observar que se muestra lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/words.PNG)
 
 # Generando el primer proyecto en Rails.
->	Abrimos una nueva ventana la terminal y tecleamos lo siguiente: `Cd: /Sites`
+>	En una nueva ventana abrimos la terminal y tecleamos lo siguiente: `Cd: /Sites`
 >	Después de haber hecho lo anterior tecleamos lo siguiente `rails new votos`
 >	Ahora entramos a nuestro nuevo proyecto `Cd: votos`
->	Una vez dentro de nuestro nuevo proyecto comprovaremos que se genero con exito, por lo cual proseguiremos a iniciar el servidor de ruby con le siguiente comando, `rails server` o `rails s`, si todo va bien en consola debe de aparecer lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/server.PNG)
->	Despues de esto, abrimos nuestro navegador y escribimos la siguiente dirección: 
+>	Una vez dentro de nuestro nuevo proyecto comprovaremos que se generó con exito, por lo cual proseguiremos a iniciar el servidor de ruby con le siguiente comando, `rails server` o `rails s`, si todo va bien en consola debe de aparecer lo siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/server.PNG)
+>	Después de esto, abrimos nuestro navegador y escribimos la siguiente dirección: 
 
 >	http://localhost:3000/
 
@@ -160,7 +160,7 @@ dejemplo3.get_total_chars
 >   Donde podremos ver lo siguiente:
 >	 ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalWeb.PNG)
 > Ahora, para poder establecer nuestra ruta, principal/index como pantalla principal, tenemos que ir al archivo donde se declaran las rutas de acceso, el cual se encuentra en la siguiente dirección, `proyecto/config/routes.rb` , procedemos a abrirlo para poder editarlo.
-> Al abrirlo podremos ver que unicamente tenemos una routa declarada: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routes.PNG)
+> Al abrirlo podremos ver que unicamente tenemos una ruta declarada: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routes.PNG)
 > Ahora procederemos a cambiar la línea 2, por lo siguiente:
 
 > ```ruby
@@ -182,12 +182,12 @@ dejemplo3.get_total_chars
 > Los controladores estan en: `proyecto/app/views/controllers`
 
 > ### *Generando un CRUD*
-> Ya que sabemos como crear una vista, controlador y una accion, ahora vamos a generar un crud, con el cual podamos crear, leer, actualizar y eliminar objetos de una BD.
+> Ya que sabemos como crear una vista, controlador y una acción, ahora vamos a generar un crud, con el cual podamos crear, leer, actualizar y eliminar objetos de una BD.
 
 > #### *Creando Una Migracion*
-> Nuestra primera tabla tendra los campos `id`, `titulo` & `descripcion`, esto lo realizaremos automaticamente con el comando `Scaffold` el cual nos generará nuestro esquema de la tabla, el modelo, vista y controlador del mismo, en este caso de tema, en la ventana de terminal escribiremos lo siguiente (dentro del directorio de nuestro proyecto):
+> Nuestra primera tabla tendra los campos `id`, `titulo` & `descripcion`, esto lo realizaremos automáticamente con el comando `Scaffold` el cual nos generará nuestro esquema de la tabla, el modelo, vista y controlador del mismo, en este caso de tema, en la ventana de terminal escribiremos lo siguiente (dentro del directorio de nuestro proyecto):
 
-> `rails generate scaffold tema titulo:string descripcion:text`
+> `rails generate scaffold tema titulo:string descripcion:text --skip-stylesheets --skip-javascripts `
 
 > Seguido de:
 
@@ -205,7 +205,7 @@ dejemplo3.get_total_chars
 > Ahora prueba con lo siguiente:
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/urlConsole.PNG)
 
-> Despues de haber realizado lo anterior si nos dirigimos en nuestro navegador a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
+> Después de haber realizado lo anterior si nos dirigimos en nuestro navegador a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
 
 > Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
@@ -229,6 +229,7 @@ dejemplo3.get_total_chars
 > `votos/app/models/`
 
 > Procedemoa abrir los modelos de temas y de votos y los editamos de tal manera que nos queden de la siguiente forma:
+
 > Temas
 
 > ```ruby
@@ -259,7 +260,7 @@ dejemplo3.get_total_chars
 | mi_tema.votos.create |  |
 | mi_tema.votos.destroy_all |  |
 
-> Ya que hemos jugado un poco es momento de que podamos votar atravez de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
+> Ya que hemos jugado un poco es momento de que podamos votar a través de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
 
 
 > ```ruby
@@ -281,12 +282,62 @@ dejemplo3.get_total_chars
   end
 > ```
 
-
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/upVote.PNG)
 
-> Ahora a nuestra vista `index` de temas le anexamos un boton de botar, el cual tendra una accion sobre el metodo upvote
+> Ahora a nuestra vista `index` de temas le anexamos un boton de botar, el cual tendra una acción sobre el metodo upvote
  
  > ```ruby
     <td><%= pluralize(tema.votos.count, "voto") %></td>
     <td><%= button_to '+1', upvote_tema_path(tema), method: :post %></td>
 > ```   
+
+> Si realizamos todo bien, al ingresar a la ruta `http://localhost:3000/temas` nos debe de aparecer el index de la siguiente manera:
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasLike.PNG)
+
+
+> Donde si damos click en el boton `+1` de algun tema, debe de incrementar los votos sobre dicho tema.
+
+> # Integrando Bootstrap
+> En este caso para integrar bootstrap a nuestro proyecto lo haremos en forma de dependcia, para lo cual iremos a nuestro archivo
+> `Gemfile` de nuestro proyecto (este se encuentra en la raíz), y anexaremos la siguiente linea:
+
+> ``` ruby
+  gem 'bootstrap-sass'
+> ```
+
+> Nuestro archivo `Gemfile` debe de quedar de la siguiente manera:
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapSass.PNG)
+
+> Ahora para instalar las dependecias corremos el siguiente comando (desde el directorio de la aplicación):
+
+> `bundle install`
+
+> Una vez instalado las dependecias modificaremos el sigueinte archivo `votos/assets/javascript/application.js` y agregaremos la sigueinte línea
+> `//= require bootstrap`  de tal manera que nuestro archivo quede de la siguietne forma:
+
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/bootstrapJs.PNG)
+
+> Como ahora utilizamos archos  Sass, tenemos que renombrar el siguiente fichero: `votos/stylesheet/application.css` por `votos/stylesheet/application.scss`
+> Y le anexamos una línea, la cual dice que utilizaremos bootstrap.
+
+> `@import "bootstrap";`
+
+> Ya tenemos todo listo para comenzar a utilizar `Bootstrap` en nuestro proyecto.
+
+> ### Agregando nuestra propia hoja de estilo
+> Para agregar nuestra propia hoja de estilo, la podemos agregar directo en `votos/app/assets/custom.css`
+> Después tenemos que incializar la hoja de estilo en el siguiente archivo en  en `votos/config/initializers/<assets class="rb"></assets>`
+
+> Nos debe de quedar algo así:
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/customAssetse.PNG)
+
+> Ahora procegimos a agregar la siguiente línea a la vista de la aplicación, nuestro archivo base, el cual se encuentra
+> en la siguiente ruta `votos/app/views/layouts/application.html.erb`
+
+> ```ruby 
+    <%= stylesheet_link_tag    'custom', media: 'all', 'data-turbolinks-track' => true %>
+>```
+
+>
