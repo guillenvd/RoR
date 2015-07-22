@@ -28,6 +28,9 @@
 >	*  3**3
 >	*  variable = 5
 >	*  variable * 2
+>	*	hash = {"foo" => "bar", "bar" => "foo"}
+>	*	hash['foo']
+>	*	hash.fetch('foo')
 > 	*	frutas = ["kiwi", "fresa", "ciruela"]
 > 	*	frutas = frutas + ["naranja"]
 > 	*	frutas = frutas - ["kiwi"]
@@ -47,4 +50,16 @@
 >	* 	array.first(2)
 >	* 	array.min
 >	* 	array.max
-
+>
+>	## Clases, Objetos y Variables
+>	Para esta parte crearemos un archivo en nuestro escritorio, con el nombre `yield` y la extension `.rb`
+>	en el cual colocaremos le siguiente codigo:
+>	```ruby
+def test
+  puts "ejecutando código dentro del método test"
+  yield
+  puts "ejecutando nuevamente el código dentro del método test"
+end
+test { puts "ejecutando el código dentro del bloque que hemos pasado como argumento" }
+```
+> Podremos observar que se muestra lo siguiente ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/yield.PNG)
