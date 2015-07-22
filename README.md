@@ -8,8 +8,10 @@
 
 ## Instalando Ruby on Rails.
 * Windows & Mac
+
 > Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
 > http://rubyinstaller.org/
+
 Para Linux.
 >
 
