@@ -173,7 +173,7 @@ dejemplo3.get_total_chars
 
 > Ahora al abrir nuestra aplicación, desde la routa `http://localhost:3000/` nos debe de desplegar la vista principal, como se ve a continuación: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/principalPrincipal.PNG)
 
-> Ahora iremos a trabajar con el controlador y a vista un poco, los cuales se encuentran en la siguiente dirección:
+> Ahora iremos a trabajar con el controlador y la vista un poco, los cuales se encuentran en la siguiente dirección:
 > Las vistas estan en: `proyecto/app/views/principal`
 > Los controladores estan en: `proyecto/app/views/controllers`
 
@@ -199,16 +199,16 @@ dejemplo3.get_total_chars
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/rakeRoutes.PNG)
 
 > Ahora prueba con lo siguiente:
-> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/urConsole.PNG)
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/urlConsole.PNG)
 
-> Despues de haber realizado lo anterior si nos dirigimos en nuestro navegadro a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
+> Despues de haber realizado lo anterior si nos dirigimos en nuestro navegador a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
 
 > Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
-> <%= link_to 'Ira a temas', temas_path %>
+> `<%= link_to 'Ira a temas', temas_path %>`
 
-> Como realizaremos votaciones sobre temas, por lo cual vamos a generar una tabla que registre cada voto.
-> Esta tabla contendra el campo `id` y `temas_id`, proseguimos a escribir lo siguiente en la terminal:
+> Como realizaremos votaciones sobre temas, tenemos que generar una tabla que registre cada voto.
+> Esta tabla contendra el campo `id` y `tema_id`, proseguimos a escribir lo siguiente en la terminal:
 
 > `rails generate model voto tema_id:integer`
 
@@ -220,13 +220,18 @@ dejemplo3.get_total_chars
 
 > Como ya se mencionó, podemos votar sobre los temas, entonces podemos deducir que tenemos que marcar las relaciones entre estas tablas, lo cual se hace directo en el modelo de cada una, los modelos se encuentran en la siguiente ruta.
 
-> `votos/app/models/
+> `votos/app/models/`
 
 > Procedemoa abrir los modelos de temas y de votos y los editamos de tal manera que nos queden de la siguiente forma:
 > Temas
 > `has_many :votos, dependent: :destroy`
-> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasHas.PNG)
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temaHas.PNG)
 
 > Votos
 > `belongs_to :tema`
-> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votosBelongs.PNG)
+> ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votoBelongs.PNG)
+
+> | First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
