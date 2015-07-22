@@ -1,10 +1,17 @@
 # Ruby on Rails: La primera frontera.
 
-> Este taller se enfoca en dar los inicios a los interesa
+> Lecciones
+>  * Inicio con ruby.
+>  * Generando el primer proyecto en Rails.
+>  * Generando vistas y controladores.
+>  * Integrando Bootstrap.
 
-## Installation
-
-TODO: Describe the installation process
+## Instalando Ruby on Rails.
+* Windows & Mac
+> Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
+> http://rubyinstaller.org/
+Para Linux.
+>
 
 ## Usage
 
