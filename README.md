@@ -225,13 +225,22 @@ dejemplo3.get_total_chars
 > Procedemoa abrir los modelos de temas y de votos y los editamos de tal manera que nos queden de la siguiente forma:
 > Temas
 > `has_many :votos, dependent: :destroy`
+
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temaHas.PNG)
 
 > Votos
 > `belongs_to :tema`
+
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votoBelongs.PNG)
 
-> | First Header  | Second Header |
+> | Clase de Modelo / métodos de asociación | Métodos de Instancia de Modelo |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Topic.first  | mi_tema.title  |
+| Topic.last  | mi_tema.title = 'New title'  |
+| Topic.all | mi_tema.update_attributes(title: 'New title')  |
+| Topic.count  | mi_tema.update_attributes(title: 'New title') |
+| Topic.find_by_id(5)   | mi_tema.save! |
+| Topic.destroy_all  | mi_tema.destroy |
+| mi_tema.votes.count | mi_tema.votes.first.destroy |
+| mi_tema.votes.create |  |
+| mi_tema.votes.destroy_all |  |
