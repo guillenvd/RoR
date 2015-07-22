@@ -62,4 +62,6 @@ def test
 end
 test { puts "ejecutando el código dentro del bloque que hemos pasado como argumento" }
 ```
+>  Despues nos dirigiremos al sitio donde creamos el archivo desde la terminal y lo invocamos de la siguiente manera:
+>	ruby yield.rb
 > Podremos observar que se muestra lo siguiente ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/yield.PNG)
