@@ -162,3 +162,5 @@ dejemplo3.get_total_chars
 > `get 'principal' => 'principal#index', as: :principal`
 > y por ultimo agregaremos una linea más.
 > root 'principal#index' 
+> nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
+> Ahora al abrir nuestra aplicación, desde la primera
