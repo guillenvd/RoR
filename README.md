@@ -164,13 +164,17 @@ dejemplo3.get_total_chars
 > Ahora procederemos a cambiar la línea 2, por lo siguiente:
 
 > ```ruby
+  ...  
     get 'principal' => 'principal#index', as: :principal
+  ...
 > ```
 
 > y por ultimo agregaremos una línea más.
 
 > ```ruby
-    root 'principal#index'
+    ...
+      root 'principal#index'
+    ...
 > ```
 
 > nuestro archivo `routes.rb` debe de quedar de la siguiente manera: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/routesPrincipal.PNG)
@@ -210,7 +214,9 @@ dejemplo3.get_total_chars
 > Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
 > ```ruby
+  ...
    <%= link_to 'Ira a temas', temas_path %>
+  ...
 > ```
 
 > Como realizaremos votaciones sobre temas, tenemos que generar una tabla que registre cada voto.
@@ -233,7 +239,9 @@ dejemplo3.get_total_chars
 > Temas
 
 > ```ruby
+  ...
    has_many :votos, dependent: :destroy
+  ...
 > ```
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temaHas.PNG)
@@ -241,7 +249,9 @@ dejemplo3.get_total_chars
 > Votos
 
 > ```ruby
+  ... 
    belongs_to :tema
+  ...
 > ```
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/votoBelongs.PNG)
@@ -264,31 +274,37 @@ dejemplo3.get_total_chars
 
 
 > ```ruby
+...
   #Nuevo metodo para votar temas_controller.rb
   def upvote
     @tema = Tema.find(params[:id])
     @tema.votos.create
     redirect_to(temas_path)
   end
+...
 > ```
 
 > Ahora abrimos nuestro archivo routes.rb y anexamos nuestro metodo `upvote` a nuestro CRUD TEMAS, editamos el controlador para que quede de la siguiente forma:
 
 > ```ruby
+...
   resources :temas do
     member do
       post 'upvote'
     end
   end
+...
 > ```
 
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/upVote.PNG)
 
-> Ahora a nuestra vista `index` de temas le anexamos un boton de botar, el cual tendra una acción sobre el metodo upvote
+> Ahora a nuestra vista `index` de temas le anexamos un botón de botar, el cual tendra una acción sobre el metodo upvote
  
  > ```ruby
+ ...
     <td><%= pluralize(tema.votos.count, "voto") %></td>
     <td><%= button_to '+1', upvote_tema_path(tema), method: :post %></td>
+ ...
 > ```   
 
 > Si realizamos todo bien, al ingresar a la ruta `http://localhost:3000/temas` nos debe de aparecer el index de la siguiente manera:
@@ -296,14 +312,16 @@ dejemplo3.get_total_chars
 > ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasLike.PNG)
 
 
-> Donde si damos click en el boton `+1` de algun tema, debe de incrementar los votos sobre dicho tema.
+> Donde si damos click en el botón `+1` de algun tema, debe de incrementar los votos sobre dicho tema.
 
 > # Integrando Bootstrap
 > En este caso para integrar bootstrap a nuestro proyecto lo haremos en forma de depencencia, para lo cual iremos a nuestro archivo
 > `Gemfile` de nuestro proyecto (este se encuentra en la raíz), y anexaremos la siguiente línea:
 
 > ``` ruby
+...
   gem 'bootstrap-sass'
+...
 > ```
 
 > Nuestro archivo `Gemfile` debe de quedar de la siguiente manera:
@@ -340,7 +358,9 @@ dejemplo3.get_total_chars
 > en la siguiente ruta `votos/app/views/layouts/application.html.erb`
 
 > ```ruby 
+  ...
     <%= stylesheet_link_tag    'custom', media: 'all', 'data-turbolinks-track' => true %>
+  ...
 >```
 
 > Ahora ya depende de la imaginación de cada quien para editar las vistas y darle formato.
@@ -353,6 +373,7 @@ dejemplo3.get_total_chars
 > temas `votos/app/models/tema.rb`, donde anexaremos lo siguiente.
 
 > ```ruby
+....
   validates :titulo, :descripcion, presence: true
    validates :titulo, length: {
       minimum: 2,
@@ -360,6 +381,7 @@ dejemplo3.get_total_chars
       too_short: "Debe de tener al menos %{count} letras",
       too_long: "Debe de tener como maximo %{count} letras"
       }
+....
 >  ```
 
 > Donde básicamente le decimos que valide que tanto titulo y descripción no estén vacios y a demas que titulo tenga como maximo 10 letras y como Mínimo 2.
