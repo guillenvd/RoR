@@ -211,7 +211,7 @@ dejemplo3.get_total_chars
 
 > Después de haber realizado lo anterior si nos dirigimos en nuestro navegador a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
 
-> Como podermos ver nuestra base de datos se encuentra vacía, para no tardar en crear registros vamos a generar una semilla, vamos a editar el archivo en la ruta `votos/db/seeds/rb` y abriremos el archivo y colocaremos lo siguiente en el:
+> Como podermos ver nuestra base de datos se encuentra vacía, para no tardar en crear registros vamos a generar una semilla, vamos a editar el archivo en la ruta `votos/db/seeds.rb` y abriremos el archivo y colocaremos lo siguiente en el:
 
 > ```ruby
   Tema.create(titulo: 'Titulo 1', descripcion: 'Contenido 1')
@@ -224,7 +224,7 @@ dejemplo3.get_total_chars
   Tema.create(titulo: 'Titulo 8', descripcion: 'Contenido 8')
   Tema.create(titulo: 'Titulo 9', descripcion: 'Contenido 9')
   Tema.create(titulo: 'Titulo 10', descripcion: 'Contenido 10')
->``
+>```
 
 > Despues en la terminal introducimos lo siguiente:
 
