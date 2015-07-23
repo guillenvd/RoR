@@ -211,11 +211,30 @@ dejemplo3.get_total_chars
 
 > Después de haber realizado lo anterior si nos dirigimos en nuestro navegador a la siguiente liga `http://localhost:3000/temas` , nos debera de aparecer una ventana como la siguiente: ![Image of irb](https://github.com/guillenvd/RoR/blob/master/img/temasIndex.PNG)
 
-> Para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
+> Como podermos ver nuestra base de datos se encuentra vacía, para no tardar en crear registros vamos a generar una semilla, vamos a editar el archivo en la ruta `votos/db/seeds/rb` y abriremos el archivo y colocaremos lo siguiente en el:
+
+> ```ruby
+  Tema.create(titulo: 'Titulo 1', descripcion: 'Contenido 1')
+  Tema.create(titulo: 'Titulo 2', descripcion: 'Contenido 2')
+  Tema.create(titulo: 'Titulo 3', descripcion: 'Contenido 3')
+  Tema.create(titulo: 'Titulo 4', descripcion: 'Contenido 4')
+  Tema.create(titulo: 'Titulo 5', descripcion: 'Contenido 5')
+  Tema.create(titulo: 'Titulo 6', descripcion: 'Contenido 6')
+  Tema.create(titulo: 'Titulo 7', descripcion: 'Contenido 7')
+  Tema.create(titulo: 'Titulo 8', descripcion: 'Contenido 8')
+  Tema.create(titulo: 'Titulo 9', descripcion: 'Contenido 9')
+  Tema.create(titulo: 'Titulo 10', descripcion: 'Contenido 10')
+>``
+
+> Despues en la terminal introducimos lo siguiente:
+
+> `rake db:seed`
+
+> Ahora para poder dirigirnos con un link desde nuestra vista principal a los temas pondremos lo siguiente al final del index de principal:
 
 > ```ruby
   ...
-   <%= link_to 'Ira a temas', temas_path %>
+   <%= link_to 'Ir a temas', temas_path %>
   ...
 > ```
 
