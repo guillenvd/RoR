@@ -350,7 +350,7 @@ dejemplo3.get_total_chars
 
 > Como se puede apreciar, si intentamos generar un nuevo tema con los campos vacios o con una sola letra, este se genera
 > sin ningun problema, para poder impedir que esto suceda debemos de agregar validaciones o restricciones en el modelo de
-> de temas `votos/app/models/tema.rb`, donde anexaremos lo siguiente.
+> temas `votos/app/models/tema.rb`, donde anexaremos lo siguiente.
 
 > ```ruby
   validates :titulo, :descripcion, presence: true
@@ -362,7 +362,13 @@ dejemplo3.get_total_chars
       }
 >  ```
 
-> Donde básicamente le decimos que valide que tanto titulo y descripción no esten vacios y a demas que titulo tenga como maximo 10 letras y como Mínimo 2.
+> Donde básicamente le decimos que valide que tanto titulo y descripción no estén vacios y a demas que titulo tenga como maximo 10 letras y como Mínimo 2.
 
 > En esta página pueden encontrar más información sobre validaciones y otros temas.
 > http://guides.rubyonrails.org/active_record_validations.html
+
+#Contacto
+
+> * Facebook: https://www.facebook.com/llenllen
+> * Twitter: https://twitter.com/guillenvd
+> * +Gmail: https://plus.google.com/u/1/+DavidGuillenVazquez1
