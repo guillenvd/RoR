@@ -279,15 +279,15 @@ dejemplo3.get_total_chars
 
 | Clase de Modelo / métodos de asociación | Métodos de Instancia de Modelo |
 | ------------- | ------------- |
-| Tema.first  | mi_tema.titulo  |
-| Tema.last  | mi_tema.titulo = 'New titulo'  |
-| Tema.all | mi_tema.update_attributes(titulo: 'New titulo')  |
-| Tema.count  | mi_tema.update_attributes(titulo: 'New titulo') |
-| Tema.find_by_id(5)   | mi_tema.save! |
-| Tema.destroy_all  | mi_tema.destroy |
-| mi_tema.votos.count | mi_tema.votos.first.destroy |
-| mi_tema.votos.create |  |
-| mi_tema.votos.destroy_all |  |
+| Tema.first  | VarTema.titulo  |
+| Tema.last  | VarTema.titulo = 'New titulo'  |
+| Tema.all | VarTema.update_attributes(titulo: 'New titulo')  |
+| Tema.count  | VarTema.update_attributes(titulo: 'New titulo') |
+| Tema.find_by_id(5)   | VarTema.save! |
+| Tema.destroy_all  | VarTema.destroy |
+| VarTema.votos.count | VarTema.votos.first.destroy |
+| VarTema.votos.create |  |
+| VarTema.votos.destroy_all |  |
 
 > Ya que hemos jugado un poco es momento de que podamos votar a través de la aplicación web, para lo cual tenemos que ir al controlador de los temas para agregar un nuevo metodo
 
