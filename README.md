@@ -12,6 +12,7 @@
 > Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
 > http://rubyinstaller.org/
 > Se debe de instalar la versión 2.0
+
 > Probar
 > `gem --version`
 > `ruby --version`
