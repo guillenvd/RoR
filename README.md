@@ -14,10 +14,15 @@
 > Se debe de instalar la versión 2.0
 
 > Probar
+
 > `gem --version`
+
 > `ruby --version`
+
 > `rails --version`
+
 > `sqlite3 --version`
+
 > `gem install json`
 
 > Sí en la línea de `gem install json` no se descargo la gema seguir los siguentes pasos:
