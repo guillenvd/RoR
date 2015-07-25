@@ -12,7 +12,22 @@
 > Para Windows y Mac existe un instalador el cual se encuentra en el siguiente link. 
 > http://rubyinstaller.org/
 > Se debe de instalar la versión 2.0
+> Probar
+> `gem --version`
+> `ruby --version`
+> `rails --version`
+> `sqlite3 --version`
+> `gem install json`
 
+> Sí en la línea de `gem install json` no se descargo la gema seguir los siguentes pasos:
+> * Bajar: AddTrustExternalCARoot-2048.pem del siguiente link:
+> * https://mega.nz/#F!Q5cwEAoQ!bZ1RFmCcN2tXRzMID9SpSQ
+> * Encontrar la carpeta de `RailsInstaller`, seguro esta en la raíz de C.
+> * Ir a la ruta `RailsInstaller\Ruby2.0.0\lib\ruby\2.0.0\rubygems\ssl_certs`
+> * Y colocar el archivo en la carpeta ssl_certs.
+> * Al probar `gem install json` debe de funcionar correctamente.
+
+> * Por ultimo colocamos
 * Para GNU/Linux.
 > Linux se debe de instalar RVM 
 
